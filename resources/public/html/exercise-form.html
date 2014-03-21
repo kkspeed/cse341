@@ -1,0 +1,70 @@
+<div class="container bg-white col-md-10" id="content-bg">
+  <form action="/admin/exercises/add" method="post" id="exercise"
+        enctype="multipart/form-data">
+    <div class="form-group">
+      <label class="control-label" for="name">Name</label>
+      <input type="text" class="form-control" id="input-name" name="name"/>
+    </div>
+    <div class="form-group">
+      <label class="control-label" for="due">Due</label>
+      <input type="text" class="form-control" id="input-due" name="due"/>
+    </div>
+    <div class="list-group questions num--0">
+    </div>
+    <div class="form-group">
+      <a href="javascript:void(0);" onclick="javascript:add_problem();" class="btn btn-warning">+</a>
+    </div>
+    <div class="form-group">
+      <input type="submit" value="Submit" class="btn btn-primary"/>
+      <input type="hidden" value="0" id="question-count" name="count"/>
+    </div>
+  </form>
+  <script type="text/javascript">
+    $('#input-due').datetimepicker({
+	    timeFormat: "hh:mm tt"
+    });
+
+    function add_problem() {
+        var num = parseInt($('.questions').attr('class').split('--')[1]);
+        num += 1;
+        var num_str = num.toString();
+        $(".questions").last().append(
+            "<div class='form-group list-group-item question'>" +
+              "<h4>Question: " + "<span class='question-num'>" + num_str + "</span>" +
+              "&nbsp;<i class='glyphicon glyphicon-trash' id='remove-"+num_str+
+              "'onclick='javascript:remove_question(this);'/></h4>" +
+              "<p>" + "Specs:" + "</p>" +
+              "<textarea class='form-control' name='spec-"+num_str+"'></textarea>" +
+              "<p>" + "Attach:" + "</p>" +
+              "<input type='file' class='form-control' name='file-"+num_str+"'/>" +
+            "</div>");
+        $('.questions').removeClass('num--'+(num-1).toString());
+        $('.questions').addClass('num--'+num_str);
+        $('#question-count').val(num_str);
+    }
+
+    function remove_question(item) {
+        console.log($(item).closest('div.question'));
+        $(item).closest('div.question').remove();
+        reorder_exercises();
+    }
+
+    function reorder_exercises() {
+       var old_num = parseInt($('.questions').attr('class').split('--')[1]);
+       var num = 1;
+       var num_str = num.toString();
+       $('div.question').each(function(){
+           $(this).children('h4').children('.question-num').html(num_str);
+           $(this).children('h4').children('i').attr('id', 'remove-' + num_str);
+           $(this).children('textarea').attr('name', 'spec-'+num_str);
+           $(this).children('input').attr('name', 'file-'+num_str);
+           num += 1;
+           num_str = num.toString();
+       });
+       num -= 1;
+       $('.questions').removeClass('num--' + old_num.toString());
+       $('.questions').addClass('num--'+num.toString());
+       $('#question-count').val(num.toString());
+    }
+  </script>
+</div>

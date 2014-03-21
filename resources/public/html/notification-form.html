@@ -1,0 +1,13 @@
+<div class="container bg-white col-md-10" id="content-bg">
+  <form action="/admin/notifications/add" method="post" id="notification">
+    <div class="form-group">
+      <label class="control-label" for="title">Title</label>
+      <input type="text" class="form-control" id="input-title" name="title"/>
+      <span style="display: none" class="glyphicon glyphicon-ok form-control-feedback"></span>
+    </div>
+    <div class="form-group">
+      <textarea id="text-article" class="form-control" rows="20" name="article"></textarea>
+    </div>
+    <input type="submit" value="Publish" class="btn btn-primary"/>
+  </form>
+</div>

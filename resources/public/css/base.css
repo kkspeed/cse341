@@ -1,0 +1,189 @@
+body {
+    font-size: 16px;
+    line-height: 1.8125em;
+    font-family: "Roboto", Arial, serif;
+    font-weight: 400;
+    color: #777777;
+    background: #003366;
+}
+
+h1 {
+    font-family: "Roboto", Arial, serif;
+    font-size: 42px;
+    margin-bottom: 0.7em;
+    font-weight: 100;
+}
+
+p {
+    font-family: "Roboto", Arial, serif;
+    font-weight: 300;
+    font-style: normal;
+    line-height: 28.80px;
+}
+
+a {
+    color: #999999;
+    text-decoration: none;
+    transition: color 0.25s;
+}
+
+#page-header {
+    background: rgba(0, 0, 0, 0.95);
+    position: fixed;
+    color: white;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    padding: 0.5em 0;
+    border-bottom: 1px solid #e8e8e8;
+}
+
+#logo {
+    background-image: url("/image/logo.png");
+    width: 50px;
+    height: 47px;
+    background-size: 50px 47px;
+    display: inline-block;
+    margin: 0;
+}
+
+#logo-text {
+    position: absolute;
+    bottom: 12px;
+    left: 65px;
+    font-size: xx-large;
+}
+
+#page-wrapper {
+    padding-top: 5em;
+}
+
+#run-image {
+    width: 500px;
+    height: 375px;
+    /* background-image: url("../images/pop-running.jpg"); */
+    /* background-size: 500px 375px; */
+}
+#pop-slide {
+    display: none;
+}
+
+#play-video {
+    z-index: 99;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: white;
+    font-size: 30px;
+    text-shadow: 1px 1px #cccccc;
+}
+
+#play-video a {
+    color: white;
+}
+
+#play-video a:hover {
+    color: #FF8330;
+    text-decoration: none;
+}
+
+#play-video img {
+    width: 50px;
+    height: 50px;
+}
+
+#team-image {
+    width: 550px;
+    height: 375px;
+    background-image: url("../images/group-1.jpg");
+    background-size: 550px 375px;
+}
+
+#class-image {
+    width: 550px;
+    height: 375px;
+    background-image: url("../images/class.jpg");
+    background-size: 550px 375px;
+}
+
+.background-green {
+    background: #b3c833;
+}
+
+.background-blue {
+    background: #1aa1e1;
+}
+
+.background-orange {
+    background: #fb8521;
+}
+
+.text-white {
+    color: #ffffff;
+}
+
+.text-red {
+    color: #ce5043;
+}
+
+.text-dark-blue {
+    color: #3f5ca9;
+}
+
+.text-blue {
+    color: #1aa1e1;
+}
+
+.text-orange {
+    color: #fb8521;
+}
+
+.text-aqua {
+    color: #658092;
+}
+
+#qr-code img {
+    margin-top: 20px;
+    width: 150px;
+    height: 150px;
+}
+
+.qr-block {
+    margin-top: 15px;
+}
+.qr-block-2 {
+    margin-left: 10px;
+}
+
+.background-green-light {
+    background: #4dca92;
+}
+
+.background-aqua-light {
+    background: #56d4d3;
+}
+
+#store-buttons-section {
+    margin-top: -15px;
+}
+
+.notification-item {
+    border-left: 3px solid;
+    border-color: #f0ad4e;
+    background-color: #fcf8f2;
+    margin-bottom: 10px;
+}
+
+.notification-overview {
+    color: #bc360a;
+}
+
+.notification-content {
+    border-width: 1px;
+    border-color: #ddd;
+}
+
+.bg-white {
+    background: #fff;
+}
