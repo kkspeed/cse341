@@ -1,6 +1,7 @@
 # cse341
 
-FIXME
+This project aims to be a general platform to allow students to submit homeworks
+online. Currently it is still under development.
 
 ## Prerequisites
 
@@ -15,5 +16,4 @@ To start a web server for the application, run:
     lein ring server
 
 ## License
-
-Copyright © 2014 FIXME
+EPL
